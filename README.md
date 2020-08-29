@@ -1,4 +1,17 @@
 # LuckyTripTest
+## app architecture 
+before you start you should have a basic knowledge about 
+* KOTLIN,
+* ANDROIDX,
+* MVVM,
+* KOIN, 
+* RETROFIT, 
+* Material Design,
+* coroutines,
+* reactive programming using coroutines and live data,
+* KOTLINX-serialization
+
+
 # Outcome
 - To Produce a standalone application using the Java programming language,
 - Android Studio development environment and LuckyTrip API.
