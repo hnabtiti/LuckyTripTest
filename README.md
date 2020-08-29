@@ -42,6 +42,7 @@ The user should be able to select any room from the list and Once a room is sele
 ---------------------
 ##### Room picker
 - A screen containing a RecyclerView populated by data from https://devapi.luckytrip.co.uk/test/rooms endpoint
+- API doc https://htmlpreview.github.io/?https://raw.githubusercontent.com/hnabtiti/LuckyTripTest/master/api_rooms_documentation.html?token=ABIUAHY5A6UPJAJH2YDQIWC7JIXSY
 - A room cell should consist of the data mentioned previously.
 - Selecting a room should close the room picker screen and display the selected information on the home screen.
 -----------------------------
