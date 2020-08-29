@@ -1,6 +1,5 @@
 # LuckyTripTest
 ## app architecture 
-before you start you should have a basic knowledge about 
 * KOTLIN,
 * ANDROIDX,
 * MVVM,
