@@ -20,11 +20,15 @@ class HomeViewModel(repo: RoomsRepository) : ViewModel() {
     val rooms: MutableLiveData<List<Room>?> by lazy {
         MutableLiveData<List<Room>?>()
     }
+    val isViewingTypeList: MutableLiveData<Boolean> by lazy {
+        MutableLiveData<Boolean>()
+    }
 
     init {
         CoroutineScope(Dispatchers.IO).launch {
             val roomsFromServer = repo.getRooms("en")
             val sortedRooms = roomsFromServer?.rooms?.sortedBy { it.maxOccupancy }
+            isViewingTypeList.postValue(true)
             rooms.postValue(sortedRooms)
         }
     }
