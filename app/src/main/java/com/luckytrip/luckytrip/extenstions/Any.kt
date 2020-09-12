@@ -26,10 +26,3 @@ fun Any.logWTF(msg: String, tag: Tag = Tag.DEFAULT_TAG) {
     logger.logWTF(msg, tag)
 }
 
-val parser: Parser by lazy {
-    Parser(createJsonInstance())
-}
-
-fun Any.toJson(): String? {
-    return parser.toJson(this)
-}

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.luckytrip.luckytrip.api.rooms.models.Room
-import com.luckytrip.luckytrip.api.rooms.models.getFullDesc
+import com.luckytrip.luckytrip.extenstions.getFullDesc
 import com.luckytrip.luckytrip.extenstions.showWithCurrency
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations

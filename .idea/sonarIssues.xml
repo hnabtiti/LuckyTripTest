@@ -108,7 +108,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/luckytrip/luckytrip/extenstions/Room.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/luckytrip/luckytrip/extenstions/String.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/luckytrip/luckytrip/json/KoinInit.kt">
           <value>
             <set />
           </value>
@@ -134,6 +144,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/luckytrip/luckytrip/ui/gallery/GalleryFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/luckytrip/luckytrip/ui/gallery/RoomInfoFragment.kt">
           <value>
             <set />
           </value>
