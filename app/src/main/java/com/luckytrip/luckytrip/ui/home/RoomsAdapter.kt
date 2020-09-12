@@ -7,10 +7,9 @@ import com.luckytrip.luckytrip.R
 import com.luckytrip.luckytrip.api.rooms.models.Room
 
 
-class RoomsAdapter(val rooms: List<Room>, private val isList: Boolean) :
+class RoomsAdapter(val rooms: List<Room>, private val isList: Boolean, private val onClick: ((Room) -> Unit)? = null) :
     RecyclerView.Adapter<RoomHolder>() {
 
-    private var onClick: ((Room) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomHolder {
         val inflater = LayoutInflater.from(parent.context)

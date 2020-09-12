@@ -8,12 +8,12 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
 
 fun ImageView.setImageFromUrl(url: String) {
-    url?.let {
+    url.let {
         Glide.with(this.context)
             .load(it)
             .centerCrop()
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .transform(CenterCrop(), RoundedCorners(100))
+//            .transform(CenterCrop(), RoundedCorners(100))
             .into(this)
     }
 }

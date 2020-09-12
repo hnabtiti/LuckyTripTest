@@ -11,4 +11,5 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="price_example">$99.99</string>
+    <string name="quantity_desc">  x%1d %2$s</string>
 </resources>
