@@ -24,7 +24,8 @@ class HomeViewModel(repo: RoomsRepository) : ViewModel() {
     init {
         CoroutineScope(Dispatchers.IO).launch {
             val roomsFromServer = repo.getRooms("en")
-            rooms.postValue(roomsFromServer?.rooms)
+            val sortedRooms = roomsFromServer?.rooms?.sortedBy { it.maxOccupancy }
+            rooms.postValue(sortedRooms)
         }
     }
 

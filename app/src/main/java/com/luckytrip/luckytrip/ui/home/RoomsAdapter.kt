@@ -7,8 +7,9 @@ import com.luckytrip.luckytrip.R
 import com.luckytrip.luckytrip.api.rooms.models.Room
 
 
-class RoomsAdapter(val rooms: List<Room>, private val isList: Boolean, private val onClick: ((Room) -> Unit)? = null) :
+class RoomsAdapter(val rooms: List<Room>, private val isList: Boolean, onClick: ((Room) -> Unit)? = null) :
     RecyclerView.Adapter<RoomHolder>() {
+    var onRoomClicked: ((Room) -> Unit)? = onClick
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomHolder {
@@ -18,7 +19,7 @@ class RoomsAdapter(val rooms: List<Room>, private val isList: Boolean, private v
     }
 
     override fun onBindViewHolder(holder: RoomHolder, position: Int) {
-        holder.bind(rooms[position], onClick)
+        holder.bind(rooms[position], onRoomClicked)
     }
 
     override fun getItemViewType(position: Int): Int {
