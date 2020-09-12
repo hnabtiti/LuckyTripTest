@@ -1,11 +1,14 @@
 package com.luckytrip.luckytrip.extenstions
 
+import com.luckytrip.luckytrip.api.json.createJsonInstance
+import com.luckytrip.luckytrip.json.Parser
 import com.luckytrip.luckytrip.logger.Logger
 import com.luckytrip.luckytrip.logger.Tag
 
 val logger by lazy {
     Logger()
 }
+
 fun Any.logDebug(msg: String, tag: Tag = Tag.DEFAULT_TAG) {
     logger.logDebug(msg, tag)
 }
@@ -21,4 +24,12 @@ fun Any.logExecution(exception: Throwable) {
 
 fun Any.logWTF(msg: String, tag: Tag = Tag.DEFAULT_TAG) {
     logger.logWTF(msg, tag)
+}
+
+val parser: Parser by lazy {
+    Parser(createJsonInstance())
+}
+
+fun Any.toJson(): String? {
+    return parser.toJson(this)
 }
