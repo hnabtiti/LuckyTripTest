@@ -9,9 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.luckytrip.luckytrip.R
-import com.luckytrip.luckytrip.extenstions.toJson
 import com.luckytrip.luckytrip.extenstions.tryNavigate
+import com.luckytrip.luckytrip.json.Parser
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 
 const val ROOM_TAG_KEY = "room"
@@ -19,6 +20,7 @@ const val ROOM_TAG_KEY = "room"
 class HomeFragment : Fragment() {
 
     private val homeViewModel by viewModel<HomeViewModel>()
+    private val parser by inject<Parser>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
@@ -33,7 +35,7 @@ class HomeFragment : Fragment() {
                     rooms?.let {
                         val roomsAdapter = RoomsAdapter(rooms, true)
                         roomsAdapter.onRoomClicked = { room ->
-                            val bundle = bundleOf(ROOM_TAG_KEY to room.toJson())
+                            val bundle = bundleOf(ROOM_TAG_KEY to parser.toJson(room))
                             findNavController().tryNavigate(R.id.action_nav_home_to_nav_gallery, bundle)
                         }
                         adapter = roomsAdapter

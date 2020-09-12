@@ -148,6 +148,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/luckytrip/luckytrip/ui/gallery/RoomInfoFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/luckytrip/luckytrip/ui/home/HomeFragment.kt">
           <value>
             <set />

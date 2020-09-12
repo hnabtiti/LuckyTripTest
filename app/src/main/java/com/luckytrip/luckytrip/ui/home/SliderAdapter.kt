@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import com.smarteist.autoimageslider.SliderViewAdapter
 
 
-class SliderAdapter(private val sliderItems: List<String>,val onClick: (() -> Unit)?) : SliderViewAdapter<SliderAdapterVH>() {
+class SliderAdapter(private val sliderItems: List<String>, private val onClick: (() -> Unit)? = null) : SliderViewAdapter<SliderAdapterVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): SliderAdapterVH {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -13,7 +13,7 @@ class SliderAdapter(private val sliderItems: List<String>,val onClick: (() -> Un
     }
 
     override fun onBindViewHolder(viewHolder: SliderAdapterVH, position: Int) {
-        viewHolder.bind(sliderItems[position],onClick)
+        viewHolder.bind(sliderItems[position], onClick)
     }
 
     override fun getCount(): Int = sliderItems.size
