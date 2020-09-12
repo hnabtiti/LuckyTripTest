@@ -36,15 +36,15 @@ jobs:
         with:
           java-version: 1.8
       - name:  Build App Release
-        run: bash ./gradlew assembleStagingRelease --stacktrace
-      - name: Upload Staging
+        run: bash ./gradlew assembleRelease --stacktrace
+      - name: Upload Release
         uses: actions/upload-artifact@v1
         with:
           name: app-release
           path: app/build/outputs/apk/release/app-release-unsigned.apk
-      - name: Build App debug Release
+      - name: Build App debug
         run: bash ./gradlew assembledebug --stacktrace
-      - name: Upload debug
+      - name: Upload Debug
         uses: actions/upload-artifact@v1
         with:
           name: app-debug-release
