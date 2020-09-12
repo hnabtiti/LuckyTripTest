@@ -1,4 +1,5 @@
 # LuckyTripTest
+
 ## app architecture 
 * KOTLIN,
 * ANDROIDX,
@@ -9,6 +10,11 @@
 * coroutines,
 * reactive programming using coroutines and live data,
 * KOTLINX-serialization
+##CI/CD
+* I have added gitHub action for ci/cd 
+* you can see the unit test and APKs result at action in menu above 
+* actions->check the last pull request you will see the uint test result and genarated APKs
+ 
 
 
 # Outcome
