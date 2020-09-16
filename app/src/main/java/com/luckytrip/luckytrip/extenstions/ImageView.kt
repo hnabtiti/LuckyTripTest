@@ -5,6 +5,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.luckytrip.luckytrip.R
 
 
 fun ImageView.setImageFromUrl(url: String) {
@@ -12,8 +13,9 @@ fun ImageView.setImageFromUrl(url: String) {
         Glide.with(this.context)
             .load(it)
             .centerCrop()
+            .placeholder(R.drawable.room_rent_default)
+            .error(R.drawable.room_rent_default)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-//            .transform(CenterCrop(), RoundedCorners(100))
             .into(this)
     }
 }

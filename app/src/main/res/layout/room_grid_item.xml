@@ -8,22 +8,20 @@
     android:layout_margin="10dp"
     android:background="?attr/colorOnPrimary"
     android:clipToPadding="false"
-    android:elevation="5dp">
+    android:elevation="5dp"
+    android:padding="10dp">
 
-    <!--    @SerialName("room_id") val roomId : Int,-->
-    <!--    @SerialName("name") val name : String,-->
-    <!--    @SerialName("room_description") val roomDescription : String,-->
-    <!--    @SerialName("number_of_rooms_left") val numberOfRoomsLeft : Int,-->
-    <!--    @SerialName("max_occupancy") val maxOccupancy : Int,-->
-    <!--    @SerialName("price") val price : Price,-->
-    <!--    @SerialName("bed_configurations") val bedConfigurations : List<BedConfigurations>,-->
-    <!--    @SerialName("photos") val photos : List<String>-->
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSliderView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_weight=".5"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:sliderAnimationDuration="600"
-        android:minHeight="300dp"
         app:sliderAutoCycleDirection="back_and_forth"
         app:sliderAutoCycleEnabled="true"
         app:sliderIndicatorAnimationDuration="600"
@@ -35,10 +33,7 @@
         app:sliderIndicatorSelectedColor="#5A5A5A"
         app:sliderIndicatorUnselectedColor="#FFF"
         app:sliderScrollTimeInSec="1"
-        app:sliderStartAutoCycle="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:sliderStartAutoCycle="true" />
 
 
     <TextView
@@ -46,7 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:background="?attr/colorOnPrimary"
-        android:elevation="5dp"
+        android:clickable="false"
+        android:focusable="false"
         android:gravity="center"
         android:text="price_example"
         android:textSize="15sp"
@@ -59,7 +55,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorOnPrimary"
-        android:elevation="5dp"
+        android:clickable="false"
+        android:focusable="false"
         android:textAlignment="viewStart"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -72,8 +69,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorOnPrimary"
-        android:elevation="5dp"
-
+        android:clickable="false"
+        android:focusable="false"
         android:textAlignment="viewStart"
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/maxOccupancyTextView"
@@ -84,10 +81,10 @@
     <TextView
         android:id="@+id/priceTextView"
         android:layout_width="wrap_content"
-
         android:layout_height="0dp"
         android:background="?attr/colorOnPrimary"
-        android:elevation="5dp"
+        android:clickable="false"
+        android:focusable="false"
         android:gravity="center"
         android:text="@string/price_example"
         android:textColor="@color/colorPrimary"
